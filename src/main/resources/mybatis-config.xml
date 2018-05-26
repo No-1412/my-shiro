@@ -2,7 +2,13 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
 <configuration>
+
+    <typeAliases>
+        <typeAlias alias="User" type="com.kingdom.domain.User"/>
+    </typeAliases>
+
     <environments default="dev">
         <environment id="dev">
             <transactionManager type="JDBC"/>
@@ -16,7 +22,9 @@
     </environments>
 
     <mappers>
+        <!--<mapper resource="mappings/UserDao.xml"/>-->
         <mapper resource="com/kingdom/dao/mappings/UserDao.xml"/>
-        <!--<package name="classpath*:/mappings/*.xml"/>-->
+        <!--<package name="com.kingdom.dao"/>-->
     </mappers>
+
 </configuration>
