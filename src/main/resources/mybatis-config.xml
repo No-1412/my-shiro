@@ -6,7 +6,8 @@
 <configuration>
 
     <typeAliases>
-        <typeAlias alias="User" type="com.kingdom.domain.User"/>
+        <!--<typeAlias alias="User" type="com.kingdom.domain.User"/>-->
+        <package name="com.kingdom.domain"/>
     </typeAliases>
 
     <environments default="dev">
@@ -24,6 +25,8 @@
     <mappers>
         <!--<mapper resource="mappings/UserDao.xml"/>-->
         <mapper resource="com/kingdom/dao/mappings/UserDao.xml"/>
+        <mapper resource="com/kingdom/dao/mappings/SysRoleDao.xml"/>
+        <mapper resource="com/kingdom/dao/mappings/MenuDao.xml"/>
         <!--<package name="com.kingdom.dao"/>-->
     </mappers>
 

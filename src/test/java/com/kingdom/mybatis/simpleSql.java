@@ -1,6 +1,10 @@
 package com.kingdom.mybatis;
 
+import com.kingdom.dao.MenuDao;
+import com.kingdom.dao.SysRoleDao;
 import com.kingdom.dao.UserDao;
+import com.kingdom.domain.Menu;
+import com.kingdom.domain.SysRole;
 import com.kingdom.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -31,6 +35,14 @@ public class simpleSql {
 //        System.out.println("====================== " + userList.get(0).get("username") + " ====================================");
         System.out.println("====================== " + userList.get(0).getUsername() + " ====================================");
         System.out.println(userDao.get(56).getPassword());
+        SysRoleDao sysRoleDao = sqlSession.getMapper(SysRoleDao.class);
+        SysRole sysRole = sysRoleDao.selectByPrimaryKey(1);
+        System.out.println(sysRole.getName());
+
+        MenuDao menuDao = sqlSession.getMapper(MenuDao.class);
+        Menu menu = menuDao.selectByPrimaryKey(1);
+        System.out.println(menu.getName());
+
         sqlSession.close();
     }
 
