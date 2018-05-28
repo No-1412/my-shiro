@@ -33,7 +33,7 @@ public class simpleSql {
 //        List<Map<String, Object>> userList = userDao.findList();
         List<User> userList = userDao.findList();
 //        System.out.println("====================== " + userList.get(0).get("username") + " ====================================");
-        System.out.println("====================== " + userList.get(0).getUsername() + " ====================================");
+        System.out.println("====================== " + userList.get(0).getLoginName() + " ====================================");
         System.out.println(userDao.get(56).getPassword());
         SysRoleDao sysRoleDao = sqlSession.getMapper(SysRoleDao.class);
         SysRole sysRole = sysRoleDao.selectByPrimaryKey(1);

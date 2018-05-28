@@ -33,7 +33,11 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table tableName="t_sys_menu" enableCountByExample="false" enableDeleteByExample="false" delimitAllColumns="false"
-               enableSelectByExample="false" enableUpdateByExample="false" domainObjectName="Menu" alias="t" mapperName="MenuDao"/>
+        <table tableName="t_sys_user" enableCountByExample="false" enableDeleteByExample="false" delimitAllColumns="false"
+               enableSelectByExample="false" enableUpdateByExample="false" domainObjectName="UserTest" alias="t" mapperName="UserTestDao"
+               enableSelectByPrimaryKey="false" enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false"/>
+
+        <!--<table tableName="t_sys_menu" enableCountByExample="false" enableDeleteByExample="false" delimitAllColumns="false"-->
+               <!--enableSelectByExample="false" enableUpdateByExample="false" domainObjectName="Menu" alias="t" mapperName="MenuDao"/>-->
     </context>
 </generatorConfiguration>

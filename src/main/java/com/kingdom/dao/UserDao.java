@@ -14,4 +14,10 @@ public interface UserDao {
     List<User> findList();
 
     User get(int id);
+
+    int insert(User record);
+
+    int insertSelective(User record);
+
+    User getByName(String loginName);
 }
